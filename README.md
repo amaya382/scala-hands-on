@@ -1,3 +1,3 @@
 # Scala Hands-on (ゼロから始めるScalaプロジェクト)
 
-数値列をFizzBuzzします
+文字列リストをJSON文字列に変換します
