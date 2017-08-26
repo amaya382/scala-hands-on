@@ -1,3 +1,3 @@
 # Scala Hands-on (ゼロから始めるScalaプロジェクト)
 
-JSONをパースします
+数値列をFizzBuzzします
