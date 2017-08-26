@@ -18,6 +18,8 @@ object Main {
 
     val fizzBuzzedJSON = toJSONFormat(fizzBuzzed)
     println(fizzBuzzedJSON)
+
+    writeFile("result.json", fizzBuzzedJSON)
   }
 
   def readFile(fileName: String): String =
@@ -42,4 +44,7 @@ object Main {
 
   def toJSONFormat(list: Seq[String]): String =
     compact(render(list))
+
+  def writeFile(fileName: String, contents: String): Unit =
+    IO.write(new File(fileName), contents)
 }
