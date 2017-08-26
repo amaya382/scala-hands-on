@@ -2,6 +2,7 @@ import sbt.io.IO
 import java.io.File
 import org.json4s._
 import org.json4s.jackson.JsonMethods._
+import org.json4s.JsonDSL._
 
 
 object Main {
@@ -14,6 +15,9 @@ object Main {
 
     val fizzBuzzed = toFizzBuzz(ints)
     println(fizzBuzzed)
+
+    val fizzBuzzedJSON = toJSONFormat(fizzBuzzed)
+    println(fizzBuzzedJSON)
   }
 
   def readFile(fileName: String): String =
@@ -35,4 +39,7 @@ object Main {
         case x if x % 5 == 0 => "Buzz"
         case x => x.toString
       }
+
+  def toJSONFormat(list: List[String]): String =
+    compact(render(list))
 }
